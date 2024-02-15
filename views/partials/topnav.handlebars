@@ -1,0 +1,29 @@
+ <div class="topnav">
+        <a href="/index" class="navbarbutton"><img src="/images/logo.png" alt="" id="logo"></a>
+        <a href="/index" class="navbarbutton"><i class="fa-solid fa-house"></i></a>
+        <div class="dropdown">
+            <button class="dropbtn">Filmler 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">IMDB 7+</a>
+              <a href="#">EN COK YORUMLANAN </a>
+              <a href="#">EN ÇOK BEĞENİLEN </a>
+            </div>
+          </div> 
+x       {{#if displayLink}}
+        <a href="/admin" class="navbarbutton">Admin</a>
+         {{/if}}
+        
+
+        <form class="mainsearch">
+            <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Arama Yapınız...">
+        </form>
+        {{#unless displayLink}}
+        <a href="/users/giris" class="navbarbutton">Giriş Yap</a>
+        {{/unless}}
+     {{#if displayLink}}
+         <a href="/users/logout" class="navbarbutton">Çıkış Yap</a>
+                 {{/if}}
+
+    </div>

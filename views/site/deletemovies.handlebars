@@ -1,0 +1,31 @@
+
+<div class="main">
+    <table border="1" style="margin-bottom: 100px; color: white;" >
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>AD</th>
+                            <th>Düzenle</th>
+                            <th>SIL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each posts}}
+                            <tr>
+                                <td>{{_id}}</td>
+                                <td>{{title}}</td>
+                                <td>
+                                    <a href="posts/{{_id}}" class="btn btn-danger">Düzenle</a>
+                                </td>
+                                <td>
+                                    <form action="posts/{{_id}}?_method=DELETE" method="post" >
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button class="btn btn-danger" type="submit">Sil</button>
+                                    </form>
+                                    
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+</div>

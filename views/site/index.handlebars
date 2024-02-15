@@ -1,0 +1,35 @@
+
+    <div class="main">
+        
+     
+          
+        <div class="trend">
+            
+             <a href=""><img src="movieimg/g.jpg" alt=""></a>
+            <a href=""><img src="movieimg/g.jpg" alt=""></a>
+            <a href=""><img src="movieimg/b.jpg" alt=""></a>
+            <a href=""><img src="movieimg/c.jpg" alt=""></a>
+            <a href=""><img src="movieimg/hhas.jpg" alt=""></a>
+            <a href=""><img src="movieimg/h.jpg" alt=""></a>
+           
+       
+        
+      </div>
+      
+    <div class="icerikler">
+        {{#each posts}}
+        
+        <div class="cover">
+           
+            <div class="film">
+                 
+        <a href="/posts/{{_id}}"><img src="{{post_image}}" alt="" class="image"></a>
+        <div class="overlay">{{title}}</div>
+            </div>
+         </div>
+         {{/each }} 
+ 
+    </div> 
+
+    {{>footer}}  
+   

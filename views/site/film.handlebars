@@ -1,0 +1,48 @@
+<div class="sayfa">
+
+    <div class="main1">
+        <div class="filmicerik">
+            <img src="{{post.post_image}}" style="width: 258px; height 450px;" alt="Gorsel yok" class="icerikgorseli">
+
+            <div class="rate">
+                <br>
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+            </div>
+            <div class="icerikyazisi">
+                <br>
+                <h1 style="color: rgb(255, 131, 199); padding-left: 430px;">{{post.title}}</h1>
+                {{post.content}}
+                <hr>
+                <p style="color:rgb(255, 148, 207)  ;">Oyuncular : </p>
+                <ul>
+                    <li>{{post.oyuncular}}</li>
+                </ul>
+                <hr>
+                <div class="yorumlar">
+                    <form action="/addcomment" method="POST" class="yorumyaz">
+                        <h1>Yorum Yap</h1>
+                        <input placeholder="Başlık" name="title">
+                        <input placeholder="İçerik" name="content">
+                        <input placeholder="Adınız" name="name">
+                        <button>Kayıt Ol</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+{{>footer}}
